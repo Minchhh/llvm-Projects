@@ -1,0 +1,16 @@
+Attached test case in the Testcase folder has a struct defined in define.h, this is used across multiple functions in main.c and fill.c. 
+
+The task is to write a pass in llvm to determine the following,
+
+    - Dead fields of the struct - the fields which are not accessed at all / the fields to which there is only store (no load access) / fields accessed in functions which are not called anywhere 
+    -  Hot fields - Fields which are frequently accessed, for example fields used in loops.
+    - Cold fields - Fields which are less frequently accessed. 
+
+This can be implemented by assigning weight to each field of the structure. When you encounter an access to any field of a  structure,
+  -  increment weight of the field by 1 if it is not in any loop
+  -  if it is in loop increment by value equal to 8^(depth of loop). 
+
+To get single IR file from different source files use below command
+$clang -S -emit-llvm main.c
+$clang -S -emit-llvm fill.c
+$llvm-link main.ll fill.ll -S -o out.ll 
