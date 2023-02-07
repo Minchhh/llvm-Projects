@@ -23,6 +23,6 @@ $clang -S -emit-llvm main.c
 $clang -S -emit-llvm fill.c
 $llvm-link main.ll fill.ll -S -o out.ll
 
-The other commands used to run above 2 passes in clang at -O2 are
+The other command used to run above 2 passes in clang at -O2 are
 
 ~/llvm/build/bin/clang out.ll -emit-llvm -O2 -mllvm -struct-dlo-opt -S -o temp.ll
