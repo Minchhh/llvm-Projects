@@ -2,9 +2,9 @@ Scalar Evolution (SCEV) using LLVM Compiler Framework
 
 Scalar Evolution or SCEV as it's often abbreviated, is, in a very broad sense, an analysis of change (hence the "evolution" part) of scalar quantities in a program. 
 
-For more details on SCEV and to understand more about SCEV this is  the video with complete explaination
+For more details on SCEV and to understand more about SCEV this is the video with complete explanation
 
- https://www.youtube.com/watch?
+    • 	https://www.youtube.com/watch?
 
 Go through the video and understand SCEV .
 
@@ -18,15 +18,13 @@ A[i+3] = c+i+3;
 A[i] = c+i;
 }
 
-This code is simd vectorized if the array accesses are in order. That is 0/1/2/3.
+This code can be simd vectorized if the array accesses are in order. That is 0/1/2/3.
 
 For the above access pattern , the task was to identify that the accesses are not in required order. And to rearrange the code to make the access in required order.
 
-Used Scalar Evolution (SCEV) analysis pass of LLVM Compiler
-framework to rearrange the array access pattern to make the code SIMD vectorized. This exploits the spatial locality and reduces the
-running time of the program.
+Used Scalar Evolution (SCEV) analysis pass of LLVM Compiler framework to rearrange the array access pattern to make the code SIMD vectorized. This exploits the spatial locality and reduces the running time of the program.
 
-The other testcase files used are sample.c which are in Testcase folder.
+The other testcase files used is sample.c which are in Testcase folder.
 
 To get IR file from different source files(C,C++) use below command
     • $clang -S -emit-llvm sample.c
