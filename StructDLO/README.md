@@ -22,6 +22,7 @@ Finally, The dead ﬁeld will be removed by removing the dead field instructions
 The testcase files used has a struct defined in define.h, this is used across multiple functions in main.c and fill.c.
 
 To get single IR file from different source files use below command
+
     • $clang -S -emit-llvm main.c
     • $clang -S -emit-llvm fill.c
     • $llvm-link main.ll fill.ll -S -o out.ll
