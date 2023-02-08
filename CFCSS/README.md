@@ -44,8 +44,8 @@ The testcase files used are greater.c, test.c which are in Testcase folder.
 
 To get IR file from different source files(C,C++) use below command
 
-$clang -S -emit-llvm test.c
+    • $clang -S -emit-llvm test.c
 
 The code implemented is in hello pass of llvm and the command used is
 
-~/llvm/build/bin/opt test.ll --load ~/llvm/build/lib/LLVMHello.so -enable-new-pm=0 -hello2 -S -o temp.ll
+    • ~/llvm/build/bin/opt test.ll --load ~/llvm/build/lib/LLVMHello.so -enable-new-pm=0 -hello2 -S -o temp.ll
