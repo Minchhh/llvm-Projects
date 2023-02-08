@@ -4,7 +4,7 @@ Scalar Evolution or SCEV as it's often abbreviated, is, in a very broad sense, a
 
 For more details on SCEV and to understand more about SCEV this is  the video with complete explaination
 
- https://www.youtube.com/watch? .
+ https://www.youtube.com/watch?
 
 Go through the video and understand SCEV .
 
