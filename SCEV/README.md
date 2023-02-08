@@ -11,11 +11,17 @@ Go through the video and understand SCEV .
 Part of the test case which was used in SCEV Evolution is as follows
 
 c = 10;
+
 for(int i = 0; i < n; i += 4) {
+
 A[i+2] = c+i+2
+
 A[i+1] = c+i+1;
+
 A[i+3] = c+i+3;
+
 A[i] = c+i;
+
 }
 
 This code can be simd vectorized if the array accesses are in order. That is 0/1/2/3.
