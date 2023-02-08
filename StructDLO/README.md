@@ -25,4 +25,5 @@ To get single IR file from different source files use below command
     • $llvm-link main.ll fill.ll -S -o out.ll
 
 The other command used to run above 2 passes in clang at -O2 are
+
     • ~/llvm/build/bin/clang out.ll -emit-llvm -O2 -mllvm -struct-dlo-opt -S -o temp.ll
