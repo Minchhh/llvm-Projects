@@ -41,12 +41,12 @@ The code implemented is in hello pass of llvm and the command used is
 
 The other Usefull links for refernece.
 
-    • https://mukulrathi.com/create-your-own-programming-language/llvm-ir-cpp-api-tutorial/
+    • 	https://mukulrathi.com/create-your-own-programming-language/llvm-ir-cpp-api-tutorial/
 
-	A Good talk that explains GEP well.
+A Good talk that explains GEP well.
 	
-    • https://www.youtube.com/watch?v=m8G_S5LwlTo&t=1753
+    • 	https://www.youtube.com/watch?v=m8G_S5LwlTo&t=1753
     
-    • https://llvm.org/docs/GetElementPtr.html
+    • 	https://llvm.org/docs/GetElementPtr.html
       
 
