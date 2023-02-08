@@ -2,9 +2,9 @@ Scalar Evolution (SCEV) using LLVM Compiler Framework
 
 Scalar Evolution or SCEV as it's often abbreviated, is, in a very broad sense, an analysis of change (hence the "evolution" part) of scalar quantities in a program. 
 
-For more details on SCEV and to understand more about SCEV this is the video with complete explanation
+For more details on SCEV and to understand more about SCEV this is  the video with complete explaination
 
-    • 	https://www.youtube.com/watch?
+    • https://www.youtube.com/watch?
 
 Go through the video and understand SCEV .
 
@@ -24,13 +24,19 @@ A[i] = c+i;
 
 }
 
-This code can be simd vectorized if the array accesses are in order. That is 0/1/2/3.
+This code is simd vectorized if the array accesses are in order. That is 0/1/2/3.
 
 For the above access pattern , the task was to identify that the accesses are not in required order. And to rearrange the code to make the access in required order.
 
 Used Scalar Evolution (SCEV) analysis pass of LLVM Compiler framework to rearrange the array access pattern to make the code SIMD vectorized. This exploits the spatial locality and reduces the running time of the program.
 
-The other testcase files used is sample.c which are in Testcase folder.
+The Scalar Evolution was implemented by :
+
+    • Checking the Dependency between Memory Instructions.
+    • If their is no dependency between the memory instructions then calculate the offset of the Memory instructions and then rearrange.
+    • If their is dependency between the memory instruction then abort the function.
+
+The other testcase files used are sample.c which are in Testcase folder.
 
 To get IR file from different source files(C,C++) use below command
     • $clang -S -emit-llvm sample.c
@@ -44,13 +50,9 @@ The code implemented is in hello pass of llvm and the command used is
     •  ~/llvm/build/bin/opt out.ll --load ../build/lib/LLVMHello.so -hello2 -S -o out2.ll
 
 The other Usefull links for refernece.
+    • https://mukulrathi.com/create-your-own-programming-language/llvm-ir-cpp-api-tutorial/
 
-    • 	https://mukulrathi.com/create-your-own-programming-language/llvm-ir-cpp-api-tutorial/
-
-A Good talk that explains GEP well.
-	
-    • 	https://www.youtube.com/watch?v=m8G_S5LwlTo&t=1753
-    
-    • 	https://llvm.org/docs/GetElementPtr.html
+	A Good talk that explains GEP well.
+    • https://www.youtube.com/watch?v=m8G_S5LwlTo&t=1753
+    • https://llvm.org/docs/GetElementPtr.html
       
-
