@@ -30,16 +30,20 @@ STEP-2
 		}
     
 For Single Predecessor case
+
     • After computing the Gnew value , create a call to the the function __ctt_error(Gnew , Si) .
 
 For the multiple predecessor's case
+
     • Insert "D" computed as per the algorithm into each predecessor's blocks.
           Where D is the run-time adjusting signature.
+	  
     • For each predecessor , compute the updated value of G(New) XOR D
 
 The testcase files used are greater.c, test.c which are in Testcase folder.
 
 To get IR file from different source files(C,C++) use below command
+
 $clang -S -emit-llvm test.c
 
 The code implemented is in hello pass of llvm and the command used is
