@@ -19,10 +19,10 @@ Finally, The dead ﬁeld will be removed from the structure layout and the entir
 The testcase files used has a struct defined in define.h, this is used across multiple functions in main.c and fill.c.
 
 To get single IR file from different source files use below command
-$clang -S -emit-llvm main.c
-$clang -S -emit-llvm fill.c
-$llvm-link main.ll fill.ll -S -o out.ll
+
+    • $clang -S -emit-llvm main.c
+    • $clang -S -emit-llvm fill.c
+    • $llvm-link main.ll fill.ll -S -o out.ll
 
 The other command used to run above 2 passes in clang at -O2 are
-
-~/llvm/build/bin/clang out.ll -emit-llvm -O2 -mllvm -struct-dlo-opt -S -o temp.ll
+    • ~/llvm/build/bin/clang out.ll -emit-llvm -O2 -mllvm -struct-dlo-opt -S -o temp.ll
