@@ -34,7 +34,6 @@ The Scalar Evolution was implemented by :
 
     • Checking the Dependency between Memory Instructions.
     • If their is no dependency between the memory instructions then calculate the offset of the Memory instructions and then rearrange.
-    • If their is dependency between the memory instruction then abort the function.
 
 The other testcase files used are sample.c which are in Testcase folder.
 
