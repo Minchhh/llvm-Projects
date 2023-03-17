@@ -8,18 +8,14 @@ of the fusion. It should not be performed if the resulting code has anti-depende
 
 Following test case contains two loops.  Your task is to write a pass to fuse them together 
 
-void init(int *a, int *b, int *c, int n) 
-{
-  for (int i = 0; i < n; i++) 
-  {
+void init(int *a, int *b, int *c, int n) {
+  for (int i = 0; i < n; i++) {
     c[i] = i + i;
-    b[i] = i * i;    
+    b[i] = i * i;
   } 
-  
-  for (int i = 0; i < n; i++)
-  {
-    a[i] = b[i] + c[i];    
-  }   
+  for (int i = 0; i < n; i++) {
+    a[i] = b[i] + c[i];
+  } 
 }
 
 The other testcases used, are present in the Testcases folder.
