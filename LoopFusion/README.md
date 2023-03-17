@@ -17,7 +17,6 @@ void init(int *a, int *b, int *c, int n)
   {
   
     c[i] = i + i;
-    
     b[i] = i * i;
     
   }
