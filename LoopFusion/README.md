@@ -24,6 +24,7 @@ void init(int *a, int *b, int *c, int n) {
     a[i] = b[i] + c[i];
     
   } 
+  
 }
 
 The other testcases used, are present in the Testcases folder.
@@ -44,7 +45,9 @@ Similar to Scalar evolution , there are utilities to get the loop info. These ut
     
 Other Links
     • https://llvm.org/devmtg/2014-04/PDFs/Talks/Passes.pdf
+    
     • http://sridhargopinath.in/files/loop-fusion.pdf
+    
     • https://llvm.org/devmtg/2012-11/Gohman-AliasAnalysis.pdf
       
 
