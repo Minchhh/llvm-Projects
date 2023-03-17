@@ -10,13 +10,19 @@ the execution time of the program increases.
 Following test case contains two loops.  Your task is to write a pass to fuse them together 
 
 void init(int *a, int *b, int *c, int n) {
+
   for (int i = 0; i < n; i++) {
+  
     c[i] = i + i;
+    
     b[i] = i * i;
+    
   } 
   
   for (int i = 0; i < n; i++) {
+  
     a[i] = b[i] + c[i];
+    
   } 
 }
 
@@ -35,6 +41,7 @@ Similar to Scalar evolution , there are utilities to get the loop info. These ut
 
     • https://llvm.org/doxygen/classllvm_1_1LoopInfoWrapperPass.html
     • https://llvm.org/doxygen/classllvm_1_1LoopInfo.html
+    
 Other Links
     • https://llvm.org/devmtg/2014-04/PDFs/Talks/Passes.pdf
     • http://sridhargopinath.in/files/loop-fusion.pdf
