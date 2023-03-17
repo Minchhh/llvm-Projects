@@ -1,0 +1,21 @@
+void square(int *A, int *B) {
+  int val = 0;
+  for (int i = 0; i < 100; i++) {
+    val += A[i] ^ 2;
+    B[i] += val;
+  }
+}
+
+void main(){
+int A[100], B[100];
+
+for (int i = 0; i < 100; i++) {
+    A[i] = B[i] + i;
+}
+
+square(A, B);
+
+for (int i = 0; i < 100; i ++) {
+    A[i] = B[i] - i;
+}
+}

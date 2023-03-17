@@ -1,0 +1,15 @@
+void init(int *a, int *b, int *c, int *d,int n) {
+   for (int i = 0; i < n; i++) {
+    c[i] = i + i;
+  } 
+   for (int i = 0; i < n; i++) {
+    b[i] = i * i;
+  }
+   for (int i = 0; i < n; i++) {
+    d[i] = 2*(i + i);
+  }  
+
+   for (int i = 0; i < n; i++) {
+    a[i] = b[i] + c[i] + d[i];
+  } 
+}
