@@ -4,23 +4,18 @@ This project is the implementation of a pass for loop fusion in LLVM compiler. T
 loops, which are adjacent and have the same condition and increments with respect to the
 loop variable may be fused, i.e, their bodies may be executed one after the other with in a
 single loop. The decision to fuse the loops is taken based on the legality and dependency
-of the fusion. It should not be performed if the resulting code has anti-dependency or if
-the execution time of the program increases.
+of the fusion. It should not be performed if the resulting code has anti-dependency and Loop-carried Dependency.
 
 Following test case contains two loops.  Your task is to write a pass to fuse them together 
 
 void init(int *a, int *b, int *c, int n) {
-
   for (int i = 0; i < n; i++) {
-  
     c[i] = i + i;
-    
     b[i] = i * i;
     
   } 
   
   for (int i = 0; i < n; i++) {
-  
     a[i] = b[i] + c[i];
     
   } 
@@ -44,6 +39,7 @@ Similar to Scalar evolution , there are utilities to get the loop info. These ut
     • https://llvm.org/doxygen/classllvm_1_1LoopInfo.html
     
 Other Links
+
     • https://llvm.org/devmtg/2014-04/PDFs/Talks/Passes.pdf
     
     • http://sridhargopinath.in/files/loop-fusion.pdf
