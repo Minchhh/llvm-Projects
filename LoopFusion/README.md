@@ -38,7 +38,7 @@ To Understand the loop terminologies use the below link
 
     • https://llvm.org/docs/LoopTerminology.html
       
-Similar to Scalar evolution , there are utilities to get the loop info. These utilities give you all the necessary information to implement the basic variant of the pass.
+Similar to Scalar evolution , there are utilities to get the loop info. These utilities gives all the necessary information to implement the basic variant of the pass.
 
     • https://llvm.org/doxygen/classllvm_1_1LoopInfoWrapperPass.html
     • https://llvm.org/doxygen/classllvm_1_1LoopInfo.html
